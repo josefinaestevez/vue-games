@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/vue-games.svg)](https://badge.fury.io/js/vue-games)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/apertureless/vue-chartjs/blob/master/LICENSE.txt)
 
 # vue-games
 
@@ -62,3 +64,9 @@ export  default {
 
 - To create and publish this library I've followed this tutorial: https://medium.com/justfrontendthings/how-to-create-and-publish-your-own-vuejs-component-library-on-npm-using-vue-cli-28e60943eed3
 - To create Hangman game I've started from this code: https://github.com/joebeachjoebeach/hangman
+
+## License
+
+This software is distributed under [MIT license](LICENSE.txt).
+
+<a href="https://www.buymeacoffee.com/xcqjaytbl" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
