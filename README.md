@@ -1,29 +1,64 @@
+
 # vue-games
 
-## Project setup
-```
-npm install
+  A npm package which allows you to include components with games in your vue application. For now it only have a hangman game.
+
+## Installation
+
+```bash
+npm install --save vue-games
 ```
 
-### Compiles and hot-reloads for development
+  
+
+## Hangman Game
+
+```html
+<template>
+  <hangman-game />
+</template>
+
+<script>
+import 'vue-games'
+</script>
 ```
-npm run serve
+#### Properties
+
+| Property      | Type        | Default Value                                              |
+| :---          |    :----:   |          ---:                                              |
+| words         | Array       | `['Pear', 'Apple', 'Tomatoe', 'Blackberry', 'Strawberry'] `|
+| showPlayAgain | Boolean     | `true`                                                     |
+| winMessage    | String      | `'You win!'`                                               |
+| loseMessage   | String      | `'You lost!'`                                              |
+
+As default, HangmanGame component will have a default array with some words to play. Will show a play again button every time a game is ended, and  'You win!' and 'You lost!' messages. Its posible to change all this default values.
+Also, every time a game ends this component will emit `gameFinished`with the current word, and a boolean value telling if the playes has won or has lost.
+
+### Usage example:
+
+Lets say we are spanish speakers, so we want to change default values:
+
+```html
+<template>
+  <hangman-game
+    :words="words"
+    :winMessage="winMessage"
+    :loseMessage="loseMessage"
+  />
+</template>
+<script>
+import 'vue-games'
+export  default {
+  data () {
+    return {
+      words: ['Pera', 'Manzana', 'Tomate', 'Cereza', 'Frutilla'],
+      winMessage:  'Ganaste!',
+      loseMessage:  'Perdiste!'
+    }
+  }
+}
+</script>
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- To create and publish this library I've followed this tutorial: https://medium.com/justfrontendthings/how-to-create-and-publish-your-own-vuejs-component-library-on-npm-using-vue-cli-28e60943eed3
+- To create Hangman game I've started from this code: https://github.com/joebeachjoebeach/hangman
