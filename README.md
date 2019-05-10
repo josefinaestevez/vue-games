@@ -15,6 +15,8 @@ npm install --save vue-games
 
 ## Hangman Game
 
+![HangmanScreenshot](https://github.com/josefinaestevez/vue-games/blob/master/src/assets/img/hangman1.png?raw=true)
+
 ```html
 <template>
   <hangman-game />
