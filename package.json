@@ -55,8 +55,8 @@
   "main": "./dist/vue-games.common.js",
   "author": "Josefina Estevez",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/josefinaestevez/vue-games"
+    "type": "git",
+    "url": "https://github.com/josefinaestevez/vue-games"
   },
   "keywords": [
     "Vue",
