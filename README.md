@@ -44,8 +44,10 @@ Lets say we are spanish speakers, so we want to change default values:
 <template>
   <hangman-game
     :words="words"
+    :show-play-again="false"
     :winMessage="winMessage"
     :loseMessage="loseMessage"
+    @gameFinished="gameFinished"
   />
 </template>
 <script>
@@ -56,6 +58,14 @@ export  default {
       words: ['Pera', 'Manzana', 'Tomate', 'Cereza', 'Frutilla'],
       winMessage:  'Ganaste!',
       loseMessage:  'Perdiste!'
+    }
+  },
+
+  methods: {
+    gameFinished: function (word, lose) {
+      console.log('game finished!!!')
+      console.log('user was guessing word:', word)
+      console.log('she/he/it lost?', lose)
     }
   }
 }
