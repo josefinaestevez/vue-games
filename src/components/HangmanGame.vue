@@ -1,16 +1,15 @@
 <template>
   <div id="hangman">
-    <div id="buttons">
-      <button
+    <b-row align-h="center">
+      <b-button
         v-if="showPlayAgain"
-        id="playagain"
-        class="buttons-button"
-        :class="{ hidden: !gameOver }"
+        size="sm"
+        class="m-3"
         @click="playAgain"
       >
         Play Again
-      </button>
-    </div>
+      </b-button>
+    </b-row>
     
     <!-- canvas where hangman is drawn -->
     <div id="board">
@@ -327,19 +326,6 @@ html, body {
   font-family: 'Roboto', sans-serif;
   height: 100%;
   width: 100%;
-}
-
-button {
-  background-color: white;
-  border: none;
-  color: #333;
-  box-shadow: 0 2px 5px #D0D0D0;
-  font-family: 'Roboto', sans-serif;
-  margin: 2px;
-}
-
-button:disabled {
-  color: #CCC;
 }
 
 /* II. helper classes applied by js */

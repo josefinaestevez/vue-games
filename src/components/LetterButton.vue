@@ -31,3 +31,17 @@
     }
   }
 </script>
+<style scoped>
+button {
+  background-color: white;
+  border: none;
+  color: #333;
+  box-shadow: 0 2px 5px #D0D0D0;
+  font-family: 'Roboto', sans-serif;
+  margin: 2px;
+}
+
+button:disabled {
+  color: #CCC;
+}
+</style>
