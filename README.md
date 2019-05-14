@@ -31,15 +31,14 @@ import 'vue-games'
 ```
 #### Properties
 
-| Property      | Type        | Default Value                                              |
-| :---          |    :----:   |          ---:                                              |
-| words         | Array       | `['Pear', 'Apple', 'Tomatoe', 'Blackberry', 'Strawberry'] `|
-| showPlayAgain | Boolean     | `true`                                                     |
-| winMessage    | String      | `'You win!'`                                               |
-| loseMessage   | String      | `'You lost!'`                                              |
+| Property      | Type        | Default Value                                              | Valid Values |
+| :---          |    :----:   |                                                       ---: |         ---: |
+| words         | Array       | `['Pear', 'Apple', 'Tomatoe', 'Blackberry', 'Strawberry'] `|              |
+| showPlayAgain | Boolean     | `true`                                                     |              |
+| lang          | String      | `EN`                                                       |`['EN', 'ES']`|
 
-As default, HangmanGame component will have a default array with some words to play. Will show a play again button every time a game is ended, and  'You win!' and 'You lost!' messages. Its posible to change all this default values.
-Also, every time a game ends this component will emit `gameFinished`with the current word, and a boolean value telling if the playes has won or has lost.
+As default, HangmanGame component will have a default array with some words to play. Will show a play again button every time a game is ended, you can choose not showing it by sending `showPlayAgain` value in false. By default, language is english so you will see 'You win!' and 'You lost!' messages. Its posible to change default language (only to spanish for now).
+Also, every time a game ends this component will emit `gameFinished` with the current word, and a boolean value telling if the playes has won or has lost.
 
 ### Usage example:
 
@@ -50,8 +49,7 @@ Lets say we are spanish speakers, so we want to change default values:
   <hangman-game
     :words="words"
     :show-play-again="false"
-    :winMessage="winMessage"
-    :loseMessage="loseMessage"
+    :lang="ES"
     @gameFinished="gameFinished"
   />
 </template>
@@ -61,8 +59,6 @@ export  default {
   data () {
     return {
       words: ['Pera', 'Manzana', 'Tomate', 'Cereza', 'Frutilla'],
-      winMessage:  'Ganaste!',
-      loseMessage:  'Perdiste!'
     }
   },
 

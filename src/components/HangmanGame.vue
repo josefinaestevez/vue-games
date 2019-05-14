@@ -66,20 +66,50 @@
         type: Boolean,
         default: true
       },
-      winMessage: {
+      lang: {
         type: String,
-        default: 'You win!'
-      },
-      loseMessage: {
-        type: String,
-        default: 'You lost!'
+        default: 'EN',
+        validator: function (value) {
+          // The value must match one of these strings
+          return ['EN', 'ES'].indexOf(value) !== -1
+        }
       }
     },
 
     computed: {
       wordsUpperCased: function () {
         return this.words.map(word => word.toUpperCase())
-      } 
+      },
+      winMessage: function () {
+        let winMessage
+        switch (this.lang) {
+          case 'ES':
+            winMessage = 'Ganaste!'
+            break
+          // case 'FR':
+          //   winMessage = 'Horizontal'
+          //   break
+          default:
+            winMessage = 'You win!'
+            break
+        }
+        return winMessage
+      },
+      loseMessage: function () {
+        let loseMessage
+        switch (this.lang) {
+          case 'ES':
+            loseMessage = 'Perdiste!'
+            break
+          // case 'FR':
+          //   loseMessage = 'Horizontal'
+          //   break
+          default:
+            loseMessage = 'You lost!'
+            break
+        }
+        return loseMessage
+      }
     },
 
     filters: {
