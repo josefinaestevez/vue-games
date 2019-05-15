@@ -60,6 +60,7 @@
     "type": "git",
     "url": "https://github.com/josefinaestevez/vue-games"
   },
+  "license": "MIT",
   "keywords": [
     "Vue",
     "Components",
