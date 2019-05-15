@@ -4,7 +4,7 @@
 # vue-games
 
   Different word games mades as separated components to be reused.
-  This npm package allows you to include this components in your vue application. For now it only have a hangman game.\
+  This npm package allows you to include this components in your vue application.\
 
   You can check a demo online [here](https://josefinaestevez.github.io/vue-games/) :)
 

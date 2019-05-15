@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import LetterButton from './LetterButton'
 import HangmanGame from './HangmanGame'
+import CrosswordGame from './CrosswordGame'
 
 const Components = {
   LetterButton,
-  HangmanGame
+  HangmanGame,
+  CrosswordGame
 }
 
 Object.keys(Components).forEach(name => {
