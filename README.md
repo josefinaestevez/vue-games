@@ -98,8 +98,4 @@ import 'vue-games'
 - To create Hangman game I've started from this code: https://github.com/joebeachjoebeach/hangman
 - I've followed this steps to create Crossword game's html & css structure: https://www.sitepoint.com/how-built-pure-css-crossword-puzzle/
 
-## License
-
-This software is distributed under [MIT license](LICENSE.txt).
-
 <a href="https://www.buymeacoffee.com/wbOcFgG" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
